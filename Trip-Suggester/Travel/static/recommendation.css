@@ -1,0 +1,150 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;  /* Very light grey for background */
+    margin: 0;
+    color: #444;
+}
+
+h1, h2 {
+    color: #1a1a1a;  /* Dark grey for headings */
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    background: #ffffff;  /* White for the main container */
+    padding: 40px;
+    border-radius: 25px;  /* Large rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);  /* Deep shadow for a floating effect */
+}
+/* Add new styles for logo and buttons */
+.header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* Center-align title and logo */
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 60px;  /* Adjust logo size as needed */
+    height: auto;
+    margin-right: 20px;
+}
+
+.header-buttons {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #2979ff;  /* Blue background for buttons */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+    text-align: right;
+}
+
+.nav-button:hover {
+    background-color: #1a5abf;  /* Darker shade of blue on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2979ff;  /* Bright blue accent color for main title */
+}
+
+header p {
+    font-size: 1.1em;
+    color: #757575;
+}
+
+.country-recommendation {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #e3f2fd;
+    border: 3px solid #2979ff;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.travel-plan {
+    margin-top: 50px;
+    text-align: left;
+    position: relative;
+    padding-left: 30px;  /* Space for the connecting line */
+}
+
+.travel-plan::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 4px;  /* Thickness of the connecting line */
+    background: #c38c7c;  /* Color of the connecting line */
+}
+
+.travel-planTitle {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #ce9887;  /* Bright orange accent for travel plan title */
+    font-weight: bold;
+}
+
+.plan-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.plan-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.plan-item::before {
+    content: '';
+    position: absolute;
+    left: -30px;  /* Position relative to the main line */
+    top: 20px;  /* Center of the connection */
+    width: 20px;  /* Length of the connecting line */
+    height: 4px;  /* Thickness of the connecting line */
+    background: #8a655a;  /* Color of the connecting line */
+}
+
+.plan-content {
+    padding: 25px;
+    border-radius: 18px;
+    background-color: #f1f1f1;
+    border: 3px solid #7f6f56;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);  /* Deep shadow for floating effect */
+    transition: all 0.3s;
+}
+
+.plan-content:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    background-color: #e6e6e6;  /* Slightly darker background on hover */
+}
+
+p {
+    margin: 15px 0;
+    line-height: 1.8;  /* Improved spacing for readability */
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Trips</title>
+    <link rel="stylesheet" type="text/css" href="../static/Mytrips.css">
+</head>
+<body>
+    <h1 id="main-heading"><strong>My Trips</h1>
+        <div class="header-buttons">
+            <a href="{{ url_for('index') }}" class="nav-button">Home</a>
+        </div>
+    <div class="countries-grid">
+        {% for country in countries %}
+            <a href="/country/{{ country }}" class="country-link">
+                <div class="country-item">
+                    <img src="{{ url_for('static', filename='images/countries/' + country + '.jpg') }}" alt="{{ country }}">
+                    <p>{{ country }}</p>
+                </div>
+            </a>
+        {% else %}
+            <p>No trips found</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+        = primary meta tag
+    -->
+    <title>Ez Travel-discover your adventure</title>
+    <meta name="title" content="Ez Travel-discover your adventure">
+    <meta name = "descrition" content="This is a travel html template made by codewithsadee">
+
+
+    <!--
+        - favicon
+    -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <!--
+        - google font
+    -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!--
+        - custom css link
+    -->
+    <base href="/">
+    <link rel="stylesheet" href="../static/main-ez.css">
+
+    <!--
+        - preload images
+    -->
+</head>
+
+
+
+<body>
+
+    <!--
+        - preloader
+    -->
+    <div class="preloader remove " data-prelaoder>
+        <div class="Preloader-inner">
+            <img src="/imgFiles/preloader.svg" width="50" height="50"
+        alt="" class = "img">
+        </div>
+    </div>
+
+
+    <!--
+        Header
+    -->
+
+ <!--
+        - preloader
+    -->
+    <div class="preloader remove " data-prelaoder>
+        <div class="Preloader-inner">
+            <img src="/imgFiles/preloader.svg" width="50" height="50"
+        alt="" class = "img">
+        </div>
+    </div>
+
+     <!--
+        Header
+    -->
+<header class= "header "  data-header>
+    <div class="container">
+
+        <a href="#" class="logo">
+            <img src="../static/images/logo2.png" width="187" height="138"
+            alt="logo">
+        </a>
+
+        <nav class="navbar" data-navbar>
+            <div class="navbar-top">
+                <a href="#" class="logo">
+                    <img src="../static/images/logo2.png" width="187" height="138"
+                    alt="logo">
+                </a>
+                <button class="nav-toggle-btn" aria-label="close menu"
+                data-nav-toggler>
+                <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+            </button>
+            </div>
+
+            <ul class="navbar-list">
+
+                <li class="navbar-item">
+                    <a href="/" class="navbar-link">Home</a>
+                </li>
+
+                <li class="navbar-item">
+                    <a href="/trips" class="navbar-link">My Trips</a>
+                </li>
+
+                <li class="navbar-item">
+                    <a href="/about" class="navbar-link">About</a>
+                </li>
+
+
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">Contact</a>
+                </li>
+            </ul>
+
+            <div class="header-action">
+                <a href="/Login" class="btn btn-primary">Login</a>
+                <a href="/signup" class="btn btn-secondary">Sign Up</a>
+            </div>
+
+        </nav>
+
+        <button class="nav-toggle-btn" aria-label="open menu"
+        data-nav-toggler  >
+            <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <div class="overlay " data-overlay data-nav-toggler></div>
+    </div>
+</header>
+
+
+
+
+
+    <section class="hero">
+        <div class="hero-wrapper">
+
+            <div class="hero-content">
+
+                <section class="section cta" aria-label="call to action">
+                <div class = "container">
+
+                    <div class="title hero-title has-bg-img" >
+                        <h2 class="h2 title section-title">
+                            Are you Tired of looking Around for a Vacation spot?<br>
+                            We will help you find your next destination!
+                            <img src="../static/images/title-icon.svg" width="36"
+                                 height="36" alt="" class="img">
+                        </h2>
+                    </div>
+                </div>
+            </section>
+
+                            <!--                                CTA ABOVE                                               -->
+            <p class="hero-text">
+                Start Your Adventure Now
+            </p>
+<!--            <button class ="data-entry btn btn-secondary" data-entry>Plan a Trip</button>-->
+                <a href="/trip_inputs" class="data-entry btn btn-secondary">Plan a Trip</a>
+            </div>
+
+
+                <figure class="hero-banner">
+                        <img src="../static/images/hero-banner.png" width="632"
+                             height="745" class="w-100">
+                    </figure>
+        </div>
+    </section>
+
+
+
+
+    <!--                             footer                        -->
+
+
+    <footer class="footer" style="background-color: white;">
+  <div class="container">
+    <div class="footer-content">
+      <div class="social-media">
+        <a href="#" class="social-link">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/tripsuggester" class="social-link" rel="noopener noreferrer" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="#" class="social-link">
+          <ion-icon name="logo-tiktok"></ion-icon>
+        </a>
+      </div>
+      <div class="links">
+        <a href="/about" class="footer-link">About Us</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+    <!--
+        - javascript link
+    -->
+ <script src="../static/js/main-script.js"></script>
+
+<!--
+    -ionicon link
+-->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

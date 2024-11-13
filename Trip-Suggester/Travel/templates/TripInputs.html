@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>Travel Preferences Form</title>
+    <link rel="stylesheet" type="text/css" href="../static/Inputs.css">
+   
+</head>
+<body>
+    
+
+<h2>Travel Preferences</h2>
+<div class="header-buttons">
+    <a href="{{ url_for('index') }}" class="nav-button">Home</a>
+    <a href="{{ url_for('TripRoute') }}" class="nav-button">My Trips</a>
+</div>
+<form action="/trip_inputs1" method="post">
+    <p>Welcome <strong>{{ session.get('user_name', 'Unknown') }}</strong></p>
+    <input type="hidden" name="UserID" id="UserID" value="{{ session.get('user_id') }}">
+
+    <label for="Age" class="centered-bold-label"> Age </label><br>
+    <div class="radio-input" style="--container-width: 600px; --num-options: 6;">
+        <label>
+            <input type="radio" id="value-1" name="Age" value="18">
+            <span>Under 18</span>
+        </label>
+        <label>
+            <input type="radio" id="value-2" name="Age" value="21">
+            <span>18-24</span>
+        </label>
+        <label>
+            <input type="radio" id="value-3" name="Age" value="30">
+            <span>25-34</span>
+        </label>
+        <label>
+            <input type="radio" id="value-4" name="Age" value="40">
+            <span>35-44</span>
+        </label>
+        <label>
+            <input type="radio" id="value-5" name="Age" value="50">
+            <span>45-54</span>
+        </label>
+        <label>
+            <input type="radio" id="value-6" name="Age" value="55">
+            <span>54+</span>
+        </label>
+        <span class="selection"></span>
+    </div>
+
+    <label for="Gender" class="centered-bold-label"> Gender </label><br>
+    <div class="radio-input" style="--container-width: 300px; --num-options: 3;">
+        <label>
+            <input type="radio" id="gender-male" name="Gender" value="Male">
+            <span>Male</span>
+        </label>
+        <label>
+            <input type="radio" id="gender-female" name="Gender" value="Female">
+            <span>Female</span>
+        </label>
+        <label>
+            <input type="radio" id="gender-prefer-not-to-say" name="Gender" value="Prefer Not to say">
+            <span>Prefer Not to say</span>
+        </label>
+        <span class="selection"></span>
+    </div>
+    
+        <label for="Budget" class="centered-bold-label"> Select Budget Amount </label>
+        <div id="form-wrapper"></div>
+		<div id="budget-amount-slider">
+			<input type="radio" name="Budget" id="1" value="500" required>
+			<label for="1" data-budget-amount="Under $500"></label>
+			<input type="radio" name="Budget" id="2" value="750" required>
+			<label for="2" data-budget-amount="$500-$1000"></label>
+			<input type="radio" name="Budget" id="3" value="1500" required>
+			<label for="3" data-budget-amount="$1001$-$2000"></label>
+			<input type="radio" name="Budget" id="4" value="2500" required>
+			<label for="4" data-budget-amount="$2001-$3000"></label>
+			<input type="radio" name="Budget" id="5" value="4000" required>
+			<label for="5" data-budget-amount="Over $3000"></label>
+			<div id="budget-amount-pos"></div>
+		</div>
+    </div>
+<br>
+<br>
+    <label for="Days" class="centered-bold-label"> Days of Travel:</label><br>
+    <div class="radio-input" style="--container-width: 400px; --num-options: 4;">
+        <label>
+            <input type="radio" id="days-1" name="Days" value="3">
+            <span>1-3 days</span>
+        </label>
+        <label>
+            <input type="radio" id="days-2" name="Days" value="6">
+            <span>4-7 days</span>
+        </label>
+        <label>
+            <input type="radio" id="days-3" name="Days" value="12">
+            <span>8-14 days</span>
+        </label>
+        <label>
+            <input type="radio" id="days-4" name="Days" value="16">
+            <span>More than 14 days</span>
+        </label>
+        <span class="selection"></span>
+    </div>
+    
+
+    <label for="Reason" class="centered-bold-label"> Reason for Travel:</label><br>
+    <div class="radio-input" style="--container-width: 500px; --num-options: 5;">
+        <label>
+            <input type="radio" id="reason-leisure" name="Reason" value="Leisure/Vacation">
+            <span>Leisure/Vacation</span>
+        </label>
+        <label>
+            <input type="radio" id="reason-adventure" name="Reason" value="Adventure/Exploration">
+            <span>Adventure/Exploration</span>
+        </label>
+        <label>
+            <input type="radio" id="reason-cultural" name="Reason" value="Cultural experiences">
+            <span>Cultural experiences</span>
+        </label>
+        <label>
+            <input type="radio" id="reason-business" name="Reason" value="Business/Work">
+            <span>Business/Work</span>
+        </label>
+        <label>
+            <input type="radio" id="reason-family" name="Reason" value="Visiting friends or family">
+            <span>Visiting friends or family</span>
+        </label>
+        <span class="selection"></span>
+    </div>
+    
+    <label for="Weather" class="centered-bold-label"> Weather Preference:</label><br>
+    <div class="radio-input" style="--container-width: 500px; --num-options: 5;">
+        <label>
+            <input type="radio" id="weather-summer" name="Weather" value="Summer">
+            <span>Summer</span>
+        </label>
+        <label>
+            <input type="radio" id="weather-winter" name="Weather" value="Winter">
+            <span>Winter</span>
+        </label>
+        <label>
+            <input type="radio" id="weather-spring" name="Weather" value="Spring">
+            <span>Spring</span>
+        </label>
+        <label>
+            <input type="radio" id="weather-autumn" name="Weather" value="Autumn">
+            <span>Autumn</span>
+        </label>
+        <label>
+            <input type="radio" id="weather-no-preference" name="Weather" value="No preference">
+            <span>No preference</span>
+        </label>
+        <span class="selection"></span>
+    </div>
+    <div class="center">
+    <label class="centered-bold-label">Activities</label><br>
+    <input type="checkbox" id="museums_and_historical_sites" name="museums_and_historical_sites">
+    <label for="museums_and_historical_sites">Museums and historical sites</label><br>
+
+    <input type="checkbox" id="beaches_and_relaxation" name="beaches_and_relaxation">
+    <label for="beaches_and_relaxation">Beaches and relaxation</label><br>
+
+    <input type="checkbox" id="shopping" name="shopping">
+    <label for="shopping">Shopping</label><br>
+
+    <input type="checkbox" id="food_and_culinary_experiences" name="food_and_culinary_experiences">
+    <label for="food_and_culinary_experiences">Food and culinary experiences</label><br>
+
+    <input type="checkbox" id="hiking_and_outdoor_adventures" name="hiking_and_outdoor_adventures">
+    <label for="hiking_and_outdoor_adventures">Hiking and outdoor adventures</label><br>
+
+    <input type="checkbox" id="nightlife_and_entertainment" name="nightlife_and_entertainment">
+    <label for="nightlife_and_entertainment">Nightlife and entertainment</label><br>
+
+    <input type="checkbox" id="sports_and_events" name="sports_and_events">
+    <label for="sports_and_events">Sports and events</label><br>
+
+    <input type="checkbox" id="nature_and_wildlife" name="nature_and_wildlife">
+    <label for="nature_and_wildlife">Nature and wildlife</label><br>
+</div>
+<br>
+    <label for="Food" class="centered-bold-label">Food Cuisine Preference:</label><br>
+    <div class="radio-input" style="--container-width: 400px; --num-options: 4;">
+        <label>
+            <input type="radio" id="food-vegan" name="Food" value="Vegan">
+            <span>Vegan</span>
+        </label>
+        <label>
+            <input type="radio" id="food-gluten-free" name="Food" value="Gluten-free">
+            <span>Gluten-free</span>
+        </label>
+        <label>
+            <input type="radio" id="food-local-cuisine" name="Food" value="Local cuisine">
+            <span>Local cuisine</span>
+        </label>
+        <label>
+            <input type="radio" id="food-no-restrictions" name="Food" value="No restrictions">
+            <span>No restrictions</span>
+        </label>
+        <span class="selection"></span>
+    </div>
+    
+    <label for="Continent" class="centered-bold-label">Location Type:</label><br>
+    <div class="radio-input" style="--container-width: 600px; --num-options: 6;">
+        <label>
+            <input type="radio" id="continent-europe" name="Continent" value="Europe">
+            <span>Europe</span>
+        </label>
+        <label>
+            <input type="radio" id="continent-asia" name="Continent" value="Asia">
+            <span>Asia</span>
+        </label>
+        <label>
+            <input type="radio" id="continent-north-america" name="Continent" value="North America">
+            <span>North America</span>
+        </label>
+        <label>
+            <input type="radio" id="continent-south-america" name="Continent" value="South America">
+            <span>South America</span>
+        </label>
+        <label>
+            <input type="radio" id="continent-africa" name="Continent" value="Africa">
+            <span>Africa</span>
+        </label>
+        <label>
+            <input type="radio" id="continent-australia-oceania" name="Continent" value="Australia/Oceania">
+            <span>Australia/Oceania</span>
+        </label>
+        <span class="selection"></span>
+    </div>
+    <br>
+    <br>
+    
+    <button class="button type1">
+        <span class="btn-txt" type="submit" value="Submit" >Submit</span>
+      </button>
+</form>
+<script>
+    window.onload = function() {
+      var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      var checkedCount = 0;
+
+      checkboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+          checkedCount = document.querySelectorAll('input[type="checkbox"]:checked').length;
+          if (checkedCount > 3) {
+            alert('You can only select up to 3 activities.');
+            checkbox.checked = false;
+          }
+        });
+      });
+    };
+  </script>
+</body>
+</html>

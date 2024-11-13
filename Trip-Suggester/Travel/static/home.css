@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    background-image: url('../resources/images/plane.png');
+    background-repeat: no-repeat;
+    background-position: 90% center;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 100px;
+    margin-left: 10px;
+}
+.plane{
+    height: 500px;
+    text-align: right;
+    margin-left: 300px;
+    opacity: 0.5;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Centered Button Styles */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px); /* Adjust height by subtracting the header's height */
+}
+
+button {
+    position: relative;
+    padding: 12px 35px;
+    background: #fec195;
+    font-size: 17px;
+    font-weight: 500;
+    color: #181818;
+    border: 3px solid #fec195;
+    border-radius: 8px;
+    box-shadow: 0 0 0 #fec1958c;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .star-1 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+  }
+  
+  .star-2 {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+  }
+  
+  .star-3 {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+  }
+  
+  .star-4 {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+  }
+  
+  .star-5 {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+  }
+  
+  .star-6 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 0.8s ease;
+  }
+  
+  button:hover {
+    background: transparent;
+    color: #fec195;
+    box-shadow: 0 0 25px #fec1958c;
+  }
+  
+  button:hover .star-1 {
+    position: absolute;
+    top: -80%;
+    left: -30%;
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  button:hover .star-2 {
+    position: absolute;
+    top: -25%;
+    left: 10%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  button:hover .star-3 {
+    position: absolute;
+    top: 55%;
+    left: 25%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  button:hover .star-4 {
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  button:hover .star-5 {
+    position: absolute;
+    top: 25%;
+    left: 115%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  button:hover .star-6 {
+    position: absolute;
+    top: 5%;
+    left: 60%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  .fil0 {
+    fill: #fffdef;
+  }
+  

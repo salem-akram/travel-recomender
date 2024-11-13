@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Recommendation</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='recommendation.css') }}"> <!-- Link to the new stylesheet -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Trip Recommendations</h1>
+            <p>Logged in as: <strong>{{ session.get('user_name', 'Unknown') }}</strong></p>
+            <input type="hidden" name="UserID" id="UserID" value="{{ session.get('user_id') }}">
+            
+            <div class="header-buttons">
+                <a href="{{ url_for('index') }}" class="nav-button">Home</a>
+                <a href="{{ url_for('TripRoute') }}" class="nav-button">My Trips</a>
+            </div>
+        </header>
+
+        {% if recommendation %}
+            <div class="country-recommendation">
+                <h2>Recommended Destination: <b>{{ recommendation }}</b></h2>
+            </div>
+        {% else %}
+            <p>No recommendations found.</p>
+        {% endif %}
+
+        <div class="travel-plan">
+            {% if var_list %}
+                <div class="travel-planTitle">Travel Plan</div>
+                <ul class="plan-list">
+                    {% for key, value in var_list.items() %}
+                        <li class="plan-item">
+                            <div class="plan-content">
+                                {{ value|safe }}
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No specific travel plan sections found.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
